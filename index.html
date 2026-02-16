@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ריטריט יוגה – יהל מוּבס | Yahel Moves Yoga Retreat</title>
+  <meta name="description" content="ריטריט רוקט, איזוני ידיים וגמישות | 2–4 ביולי 2025 | Slowness, קיבוץ מורן. Rocket, Handstands & Flexibility Retreat.">
+  <meta property="og:title" content="ריטריט יוגה – יהל מוּבס | Yahel Moves Yoga Retreat">
+  <meta property="og:description" content="שלושה ימים של תרגול עומק למתרגלות מנוסות. 2–4 ביולי 2025, Slowness, קיבוץ מורן.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
+  <meta property="og:locale:alternate" content="en_US">
+  <link rel="icon" type="image/png" href="FABICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&family=Nunito+Sans:wght@300;400;600;700&family=Sansita:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sage: #739F83;
+      --dark: #1D231C;
+      --cream: #E1DFD9;
+      --white: #FFFFFF;
+      --sage-light: #8AB49A;
+      --whatsapp: #25D366;
+      --radius: 10px;
+      --shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Heebo', sans-serif;
+      color: var(--dark);
+      line-height: 1.7;
+      font-weight: 400;
+      overflow-x: hidden;
+    }
+
+    body.lang-en {
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Sansita', sans-serif;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+
+    ::selection {
+      background: var(--sage);
+      color: var(--white);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--sage);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    section + section {
+      border-top: 1px solid rgba(115, 159, 131, 0.15);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Skip to content */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--dark);
+      color: var(--white);
+      padding: 8px 16px;
+      z-index: 1000;
+      font-size: 14px;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 16px 0;
+      transition: background 0.3s, box-shadow 0.3s, padding 0.3s;
+    }
+    .navbar.scrolled {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      padding: 10px 0;
+    }
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar-logo {
+      font-family: 'Sansita', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--white);
+      transition: color 0.3s;
+    }
+    .navbar.scrolled .navbar-logo {
+      color: var(--dark);
+    }
+    .navbar-links {
+      display: none;
+      list-style: none;
+      gap: 24px;
+      align-items: center;
+    }
+    .navbar-links a {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--white);
+      transition: opacity 0.15s ease;
+      position: relative;
+    }
+    .navbar.scrolled .navbar-links a {
+      color: var(--dark);
+    }
+    .navbar-links a:hover,
+    .navbar-links a:focus {
+      opacity: 0.7;
+    }
+    .navbar-links a:focus-visible {
+      outline: 2px solid var(--sage-light);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .lang-toggle {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      color: var(--white);
+      padding: 4px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.3s;
+      font-family: 'Nunito Sans', sans-serif;
+    }
+    .navbar.scrolled .lang-toggle {
+      background: rgba(115,159,131,0.1);
+      border-color: var(--sage);
+      color: var(--sage);
+    }
+    .lang-toggle:hover,
+    .lang-toggle:focus {
+      background: rgba(255,255,255,0.35);
+    }
+    .navbar.scrolled .lang-toggle:hover,
+    .navbar.scrolled .lang-toggle:focus {
+      background: var(--sage);
+      color: var(--white);
+    }
+    .lang-toggle:focus-visible {
+      outline: 2px solid var(--sage-light);
+      outline-offset: 2px;
+    }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .navbar.scrolled .hamburger span {
+      background: var(--dark);
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--white);
+      z-index: 99;
+      padding-top: 80px;
+      text-align: center;
+    }
+    .mobile-nav.open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+    .mobile-nav a {
+      font-size: 1.2rem;
+      color: var(--dark);
+      font-weight: 600;
+    }
+    .mobile-nav a:hover,
+    .mobile-nav a:focus {
+      opacity: 0.7;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      background: url('hero-beach.jpg') center center / cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      padding: 120px 20px 80px;
+      position: relative;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(29,35,28,0.55) 0%, rgba(115,159,131,0.45) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+    .hero-content h1 {
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      margin-bottom: 16px;
+      font-style: italic;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      opacity: 0.95;
+      margin-bottom: 12px;
+      font-weight: 300;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+    }
+    .hero-desc {
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      opacity: 0.9;
+      margin-bottom: 32px;
+      font-weight: 300;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+    }
+    .btn {
+      display: inline-block;
+      padding: 19.2px 32px;
+      border-radius: 300px;
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.1s linear, transform 0.2s ease;
+      border: none;
+      text-decoration: none;
+    }
+    .btn:hover {
+      opacity: 0.75;
+      transform: translateY(-2px);
+    }
+    .btn:focus-visible {
+      outline: 2px solid var(--sage);
+      outline-offset: 3px;
+      border-radius: 300px;
+    }
+    .btn-primary {
+      background: var(--white);
+      color: var(--sage);
+    }
+    .btn-whatsapp {
+      background: var(--sage);
+      color: var(--white);
+      font-size: 1.1rem;
+    }
+
+    /* ===== SECTIONS COMMON ===== */
+    section {
+      padding: 80px 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-bottom: 40px;
+      color: var(--dark);
+    }
+    .section-sage .section-title,
+    .section-sage p,
+    .section-sage li {
+      color: var(--white);
+    }
+    .section-cream {
+      background: var(--cream);
+    }
+    .section-sage {
+      background: linear-gradient(135deg, var(--sage) 0%, #5a8a6d 100%);
+      color: var(--white);
+    }
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--sage);
+      opacity: 0.4;
+      margin: 0 auto 40px;
+    }
+    .section-sage .divider {
+      background: var(--white);
+      opacity: 0.5;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Staggered delays for grouped items */
+    .fade-in:nth-child(1) { transition-delay: 0s; }
+    .fade-in:nth-child(2) { transition-delay: 0.15s; }
+    .fade-in:nth-child(3) { transition-delay: 0.3s; }
+    .fade-in:nth-child(4) { transition-delay: 0.45s; }
+    /* Image reveal with clip-path */
+    .image-reveal {
+      clip-path: inset(100% 0 0 0);
+      transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+    .image-reveal.visible {
+      clip-path: inset(0 0 0 0);
+    }
+
+    /* ===== ABOUT RETREAT ===== */
+    #schedule {
+      position: relative;
+      overflow: hidden;
+    }
+    #schedule > .container {
+      position: relative;
+      z-index: 1;
+    }
+    .about-desc {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 48px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .feature-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+      overflow: hidden;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+    }
+    .feature-card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .feature-card-body {
+      padding: 24px 20px;
+    }
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .feature-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+      color: var(--dark);
+    }
+
+    /* ===== PHOTO GALLERY STRIP ===== */
+    .gallery-strip {
+      padding: 0;
+      overflow: hidden;
+      background: var(--dark);
+    }
+    .gallery-scroll {
+      display: flex;
+      gap: 4px;
+    }
+    .gallery-scroll img {
+      height: 280px;
+      width: auto;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    @media (max-width: 767px) {
+      .gallery-scroll img {
+        height: 200px;
+      }
+    }
+
+    /* ===== SCHEDULE ===== */
+    .schedule-days {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .day-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border-left: 3px solid var(--sage);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .day-card:hover {
+      border-left-width: 5px;
+      border-color: #5A8A6E;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    }
+    .day-header {
+      background: var(--sage);
+      color: var(--white);
+      padding: 16px 24px;
+      font-family: 'Sansita', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .day-body {
+      padding: 8px 0;
+    }
+    .schedule-row {
+      display: flex;
+      padding: 12px 24px;
+      border-bottom: 1px solid rgba(115,159,131,0.1);
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .schedule-row:last-child {
+      border-bottom: none;
+    }
+    .schedule-time {
+      font-weight: 700;
+      min-width: 100px;
+      color: var(--sage);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    .schedule-activity {
+      font-size: 0.95rem;
+    }
+
+    /* ===== VENUE ===== */
+    .venue-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .venue-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .venue-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .venue-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .venue-gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .venue-gallery img:first-child {
+      grid-column: 1 / -1;
+      height: 260px;
+    }
+    .venue-info h3 {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    .includes-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .includes-list li {
+      background: rgba(255,255,255,0.15);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    /* ===== PRICING ===== */
+    .pricing-subtitle {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    .pricing-card {
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      padding: 40px 32px;
+      text-align: center;
+      border-top: 4px solid var(--sage);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+    .pricing-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+    .pricing-card .rooms-info {
+      font-size: 0.9rem;
+      opacity: 0.6;
+      margin-bottom: 20px;
+    }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(115,159,131,0.1);
+    }
+    .price-row:last-child {
+      border-bottom: none;
+    }
+    .price-label {
+      font-size: 0.9rem;
+    }
+    .price-value {
+      font-family: 'Sansita', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--sage);
+    }
+    .price-value.full {
+      font-size: 1.1rem;
+      opacity: 0.6;
+    }
+    .pricing-note {
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+      opacity: 0.7;
+    }
+
+    /* ===== CANCELLATION ===== */
+    .cancel-table {
+      max-width: 700px;
+      margin: 0 auto;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .cancel-row {
+      display: flex;
+      padding: 16px 24px;
+      background: var(--white);
+      border-bottom: 1px solid rgba(115,159,131,0.1);
+      gap: 16px;
+      align-items: center;
+    }
+    .cancel-row:last-child {
+      border-bottom: none;
+    }
+    .cancel-date {
+      font-weight: 700;
+      min-width: 120px;
+      color: var(--sage);
+      flex-shrink: 0;
+      font-size: 0.95rem;
+    }
+    .cancel-policy {
+      font-size: 0.95rem;
+    }
+
+    /* ===== WHO ===== */
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      align-items: center;
+    }
+    .who-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .who-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .who-check {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      background: var(--sage);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    .who-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .who-image img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+    }
+
+    /* ===== ABOUT YAHEL ===== */
+    .about-yahel-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      max-width: 800px;
+      margin: 0 auto;
+      align-items: start;
+    }
+    .yahel-image {
+      max-width: 320px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin: 0 auto;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+    .yahel-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .yahel-bio {
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    /* ===== REGISTER CTA ===== */
+    #register {
+      text-align: center;
+      padding: 100px 20px;
+      background: url('pigeon-beach.jpg') center center / cover no-repeat;
+      position: relative;
+    }
+    #register::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(115,159,131,0.85) 0%, rgba(90,138,109,0.8) 100%);
+    }
+    #register .container {
+      position: relative;
+      z-index: 1;
+    }
+    #register h2 {
+      color: var(--white);
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      margin-bottom: 32px;
+      font-style: italic;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    }
+    .register-sub {
+      color: rgba(255,255,255,0.85);
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+
+    /* ===== MARQUEE (about section background) ===== */
+    .marquee-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+    }
+    .marquee-bg svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+    }
+    .marquee-text {
+      font-family: 'Sansita', sans-serif;
+      font-weight: 700;
+      font-size: 64px;
+      fill: rgba(115,159,131,0.12);
+      letter-spacing: -1.28px;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--cream);
+      color: #000;
+      padding: 24px 40px 0;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .footer-logo-col {}
+    .footer-logo-text {
+      font-family: 'Sansita', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .footer-tagline {
+      font-size: 0.85rem;
+      color: rgba(0,0,0,0.55);
+      line-height: 1.5;
+      max-width: 200px;
+    }
+    .footer-col h4 {
+      font-family: 'Sansita', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--dark);
+      letter-spacing: -0.3px;
+      margin-bottom: 14px;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .footer-col li a,
+    .footer-col > a {
+      font-size: 0.88rem;
+      color: rgba(0,0,0,0.7);
+      line-height: 1.5;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col li a:hover,
+    .footer-col > a:hover {
+      color: var(--sage);
+    }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      font-size: 0.8rem;
+      color: rgba(0,0,0,0.45);
+    }
+    .footer-bottom a {
+      color: var(--sage);
+      text-decoration: none;
+    }
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 767px) {
+      footer { padding: 20px 20px 0; }
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 24px;
+      }
+      .footer-logo-col { grid-column: 1 / -1; }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+      }
+    }
+    @media (min-width: 1024px) {
+      footer { padding: 24px 60px 0; }
+      .footer-inner { gap: 32px 60px; }
+    }
+
+    /* ===== PRIVACY MODAL ===== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .modal-overlay[hidden] { display: none; }
+    .modal-overlay.modal-visible { opacity: 1; }
+    .modal-content {
+      background: var(--white);
+      border-radius: var(--radius);
+      max-width: 700px;
+      width: 100%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+    .modal-overlay.modal-visible .modal-content { transform: translateY(0); }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+    .modal-header h2 {
+      font-family: 'Sansita', sans-serif;
+      font-size: 1.4rem;
+      color: var(--dark);
+      margin: 0;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: rgba(0,0,0,0.5);
+      padding: 0 4px;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+    .modal-close:hover { color: var(--dark); }
+    .modal-body {
+      padding: 24px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--dark);
+    }
+    .modal-body h3 {
+      font-family: 'Sansita', sans-serif;
+      font-size: 1.05rem;
+      margin: 20px 0 8px;
+      color: var(--dark);
+    }
+    .modal-body h3:first-of-type { margin-top: 12px; }
+    .modal-body p { margin-bottom: 8px; }
+    .modal-body ul { margin: 8px 0 12px 20px; }
+    [dir="rtl"] .modal-body ul { margin: 8px 20px 12px 0; }
+    .modal-body li { margin-bottom: 4px; }
+    .modal-body a { color: var(--sage); text-decoration: underline; }
+    .modal-body a:hover { color: var(--sage-light); }
+    .lang-he .privacy-en,
+    .lang-en .privacy-he { display: none; }
+    .lang-he .privacy-he,
+    .lang-en .privacy-en { display: block; }
+
+    /* ===== FLOATING WHATSAPP ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background: var(--sage);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 90;
+      transition: all 0.3s ease;
+    }
+    [dir="rtl"] .whatsapp-float {
+      right: auto;
+      left: 24px;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+    .whatsapp-float:focus-visible {
+      outline: 3px solid var(--dark);
+      outline-offset: 3px;
+    }
+    .whatsapp-float svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--white);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .venue-content {
+        grid-template-columns: 1fr 1fr;
+      }
+      .about-yahel-content {
+        grid-template-columns: 220px 1fr;
+      }
+      .yahel-image {
+        margin: 0;
+      }
+      .who-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      section {
+        padding: 100px 0;
+      }
+      .gallery-scroll img {
+        height: 320px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .navbar-links {
+        display: flex;
+      }
+      .hamburger {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="lang-he">
+
+  <a href="#main" class="skip-link" data-he="דלג לתוכן" data-en="Skip to content">דלג לתוכן</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <a href="#hero" class="navbar-logo" data-he="יהל מוּבס" data-en="Yahel Moves">יהל מוּבס</a>
+        <ul class="navbar-links">
+          <li><a href="#about" data-he="הריטריט" data-en="The Retreat">הריטריט</a></li>
+          <li><a href="#schedule" data-he="לוח זמנים" data-en="Schedule">לוח זמנים</a></li>
+          <li><a href="#venue" data-he="המקום" data-en="Venue">המקום</a></li>
+          <li><a href="#pricing" data-he="מחירים" data-en="Pricing">מחירים</a></li>
+          <li><a href="#about-yahel" data-he="עליי" data-en="About">עליי</a></li>
+          <li><a href="#register" data-he="הרשמה" data-en="Register">הרשמה</a></li>
+        </ul>
+        <div class="navbar-right">
+          <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">EN</button>
+          <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#about" onclick="closeMenu()" data-he="הריטריט" data-en="The Retreat">הריטריט</a>
+      <a href="#schedule" onclick="closeMenu()" data-he="לוח זמנים" data-en="Schedule">לוח זמנים</a>
+      <a href="#venue" onclick="closeMenu()" data-he="המקום" data-en="Venue">המקום</a>
+      <a href="#pricing" onclick="closeMenu()" data-he="מחירים" data-en="Pricing">מחירים</a>
+      <a href="#about-yahel" onclick="closeMenu()" data-he="עליי" data-en="About">עליי</a>
+      <a href="#register" onclick="closeMenu()" data-he="הרשמה" data-en="Register">הרשמה</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="hero-content fade-in">
+        <h1 data-he="ריטריט רוקט, איזוני ידיים וגמישות" data-en="Rocket, Handstands &amp; Flexibility Retreat">ריטריט רוקט, איזוני ידיים וגמישות</h1>
+        <p class="hero-subtitle" data-he="2–4 ביולי 2025 | Slowness, קיבוץ מורן" data-en="July 2–4, 2025 | Slowness, Kibbutz Moran">2–4 ביולי 2025 | Slowness, קיבוץ מורן</p>
+        <p class="hero-desc" data-he="שלושה ימים של תרגול עומק למתרגלות מנוסות. עבודה רצינית – באווירה פתוחה ומשחקית." data-en="Three days of deep practice for experienced practitioners. Serious work – in an open, playful atmosphere.">שלושה ימים של תרגול עומק למתרגלות מנוסות. עבודה רצינית – באווירה פתוחה ומשחקית.</p>
+        <a href="https://wa.me/972523280031?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A8%20%D7%9E%D7%A7%D7%95%D7%9D%20%D7%91%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%F0%9F%99%8F" class="btn btn-primary" target="_blank" rel="noopener" data-he="שמרי מקום ←" data-en="Reserve Your Spot →">שמרי מקום ←</a>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT THE RETREAT ===== -->
+    <section id="about" class="section-cream">
+      <div class="container">
+        <h2 class="section-title fade-in" data-he="על הריטריט" data-en="About the Retreat">על הריטריט</h2>
+        <div class="divider fade-in"></div>
+        <p class="about-desc fade-in" data-he="בבקרים נתרגל Rocket דינמי. אחר הצהריים נעמיק בסדנאות ממוקדות – יציבות, שליטה ודיוק." data-en="Dynamic Rocket practice in the mornings. Afternoon deep-dive workshops focused on stability, control, and precision.">בבקרים נתרגל Rocket דינמי. אחר הצהריים נעמיק בסדנאות ממוקדות – יציבות, שליטה ודיוק.</p>
+        <div class="features-grid">
+          <div class="feature-card fade-in">
+            <img src="IMG_4776.jpg" alt="Yahel performing a handstand in studio" class="feature-card-img">
+            <div class="feature-card-body">
+              <div class="feature-icon">🚀</div>
+              <h3 data-he="Rocket דינמי" data-en="Dynamic Rocket">Rocket דינמי</h3>
+            </div>
+          </div>
+          <div class="feature-card fade-in">
+            <img src="IMG_4771.jpg" alt="Yahel in a headstand pose" class="feature-card-img">
+            <div class="feature-card-body">
+              <div class="feature-icon">🤸</div>
+              <h3 data-he="איזוני ידיים" data-en="Handstands">איזוני ידיים</h3>
+            </div>
+          </div>
+          <div class="feature-card fade-in">
+            <img src="IMG_4770.jpg" alt="Yahel in a deep flexibility pose" class="feature-card-img">
+            <div class="feature-card-body">
+              <div class="feature-icon">🧘</div>
+              <h3 data-he="גמישות ועומק" data-en="Flexibility &amp; Depth">גמישות ועומק</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHEDULE ===== -->
+    <section id="schedule">
+      <div class="marquee-bg" aria-hidden="true">
+        <svg viewBox="0 0 1100 240" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <path id="wave-path" d="M-550,59.58 L-550,59.58 S-183.15,209.58 0,209.58 S366.85,59.58 550,59.58 S916.85,209.58 1100,209.58 S1466.85,59.58 1650,59.58 S2016.85,209.58 2200,209.58 S2566.85,59.58 2750,59.58" fill="none"/>
+          </defs>
+          <text class="marquee-text">
+            <textPath id="marquee-text-path" href="#wave-path" startOffset="0">Rocket · Handstands · Flexibility · July 2025 · Rocket · Handstands · Flexibility · July 2025 · Rocket · Handstands · Flexibility · July 2025 · Rocket · Handstands · Flexibility · July 2025 · Rocket · Handstands · Flexibility · July 2025 ·</textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="container">
+        <h2 class="section-title fade-in" data-he="לוח זמנים" data-en="Schedule">לוח זמנים</h2>
+        <div class="divider fade-in"></div>
+        <div class="schedule-days">
+
+          <!-- Day 1 -->
+          <div class="day-card fade-in">
+            <div class="day-header" data-he="יום חמישי | 2.7" data-en="Thursday | July 2">יום חמישי | 2.7</div>
+            <div class="day-body">
+              <div class="schedule-row">
+                <span class="schedule-time">14:00</span>
+                <span class="schedule-activity" data-he="הגעה וצ׳ק אין" data-en="Arrival &amp; Check-in">הגעה וצ׳ק אין</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">15:00–18:00</span>
+                <span class="schedule-activity" data-he="סדנה: איזוני ידיים ו-Animal Flow" data-en="Workshop: Handstands &amp; Animal Flow">סדנה: איזוני ידיים ו-Animal Flow</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">18:30</span>
+                <span class="schedule-activity" data-he="ארוחת ערב" data-en="Dinner">ארוחת ערב</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">20:00</span>
+                <span class="schedule-activity" data-he="שיח פילוסופי פתוח" data-en="Open philosophical discussion">שיח פילוסופי פתוח</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 2 -->
+          <div class="day-card fade-in">
+            <div class="day-header" data-he="יום שישי | 3.7" data-en="Friday | July 3">יום שישי | 3.7</div>
+            <div class="day-body">
+              <div class="schedule-row">
+                <span class="schedule-time">07:30–09:00</span>
+                <span class="schedule-activity" data-he="Rocket דינמי" data-en="Dynamic Rocket">Rocket דינמי</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">09:30</span>
+                <span class="schedule-activity" data-he="ארוחת בוקר" data-en="Breakfast">ארוחת בוקר</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">—</span>
+                <span class="schedule-activity" data-he="זמן חופשי – בריכה / סאונה / מנוחה" data-en="Free time – Pool / Sauna / Rest">זמן חופשי – בריכה / סאונה / מנוחה</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">15:00–18:00</span>
+                <span class="schedule-activity" data-he="סדנת עומק בגמישות" data-en="Deep flexibility workshop">סדנת עומק בגמישות</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">18:30</span>
+                <span class="schedule-activity" data-he="ארוחת ערב" data-en="Dinner">ארוחת ערב</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="day-card fade-in">
+            <div class="day-header" data-he="יום שבת | 4.7" data-en="Saturday | July 4">יום שבת | 4.7</div>
+            <div class="day-body">
+              <div class="schedule-row">
+                <span class="schedule-time">07:30–09:00</span>
+                <span class="schedule-activity" data-he="Rocket דינמי" data-en="Dynamic Rocket">Rocket דינמי</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">09:30</span>
+                <span class="schedule-activity" data-he="ארוחת בוקר" data-en="Breakfast">ארוחת בוקר</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">11:30–14:30</span>
+                <span class="schedule-activity" data-he="סדנה: עמידות ידיים" data-en="Workshop: Handstands">סדנה: עמידות ידיים</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">12:00</span>
+                <span class="schedule-activity" data-he="צ׳ק אאוט מהחדרים" data-en="Room checkout">צ׳ק אאוט מהחדרים</span>
+              </div>
+              <div class="schedule-row">
+                <span class="schedule-time">—</span>
+                <span class="schedule-activity" data-he="ניתן להישאר במתחם עד 15:00" data-en="Stay on premises until 15:00">ניתן להישאר במתחם עד 15:00</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PHOTO GALLERY STRIP ===== -->
+    <div class="gallery-strip" aria-hidden="true">
+      <div class="gallery-scroll">
+        <img src="backbend-nature.jpg" alt="Yoga backbend in nature">
+        <img src="yoga-forest.jpg" alt="Yoga flexibility in forest">
+        <img src="handstand-forest.jpg" alt="Handstand between trees">
+        <img src="split-forest.jpg" alt="Split pose in forest">
+        <img src="backbend-forest.jpg" alt="Backbend on tree roots">
+        <img src="IMG_4774.jpg" alt="Forearm stand in studio">
+      </div>
+    </div>
+
+    <!-- ===== VENUE ===== -->
+    <section id="venue" class="section-sage">
+      <div class="container">
+        <h2 class="section-title fade-in" data-he="המקום" data-en="The Venue">המקום</h2>
+        <div class="divider fade-in"></div>
+        <div class="venue-content fade-in">
+          <div class="venue-gallery fade-in">
+            <img src="venue-building.webp" alt="Slowness accommodation at Kibbutz Moran">
+            <img src="venue-courtyard.jpeg" alt="Slowness courtyard with pergola">
+            <img src="venue-path.jpg" alt="Olive tree path at Kibbutz Moran">
+          </div>
+          <div class="venue-info">
+            <h3 data-he="Slowness, קיבוץ מורן" data-en="Slowness, Kibbutz Moran">Slowness, קיבוץ מורן</h3>
+            <ul class="includes-list">
+              <li data-he="2 לילות אירוח" data-en="2 nights accommodation">2 לילות אירוח</li>
+              <li data-he="2 ארוחות בוקר" data-en="2 breakfasts">2 ארוחות בוקר</li>
+              <li data-he="2 ארוחות ערב" data-en="2 dinners">2 ארוחות ערב</li>
+              <li data-he="שימוש במתחם, בריכה וסאונה" data-en="Access to facilities, pool &amp; sauna">שימוש במתחם, בריכה וסאונה</li>
+              <li data-he="כל התרגולים והסדנאות" data-en="All practices &amp; workshops">כל התרגולים והסדנאות</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section id="pricing" class="section-cream">
+      <div class="container">
+        <h2 class="section-title fade-in" data-he="חדרים ומחירים" data-en="Rooms &amp; Pricing">חדרים ומחירים</h2>
+        <div class="divider fade-in"></div>
+        <p class="pricing-subtitle fade-in" data-he="סה״כ עד 25 משתתפות" data-en="Up to 25 participants">סה״כ עד 25 משתתפות</p>
+        <div class="pricing-grid">
+
+          <!-- Double Room -->
+          <div class="pricing-card fade-in">
+            <h3 data-he="חדר זוגי (2 בחדר)" data-en="Double Room (2 per room)">חדר זוגי (2 בחדר)</h3>
+            <p class="rooms-info" data-he="8 חדרים, 16 מקומות" data-en="8 rooms, 16 spots">8 חדרים, 16 מקומות</p>
+            <div class="price-row">
+              <span class="price-label" data-he="הרשמה מוקדמת עד 12.4" data-en="Early bird until April 12">הרשמה מוקדמת עד 12.4</span>
+              <span class="price-value" data-he="₪2,650" data-en="₪2,650">₪2,650</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label" data-he="מחיר מלא" data-en="Full price">מחיר מלא</span>
+              <span class="price-value full" data-he="₪2,950" data-en="₪2,950">₪2,950</span>
+            </div>
+          </div>
+
+          <!-- Triple Room -->
+          <div class="pricing-card fade-in">
+            <h3 data-he="חדר לשלוש (3 בחדר)" data-en="Triple Room (3 per room)">חדר לשלוש (3 בחדר)</h3>
+            <p class="rooms-info" data-he="3 חדרים, 9 מקומות" data-en="3 rooms, 9 spots">3 חדרים, 9 מקומות</p>
+            <div class="price-row">
+              <span class="price-label" data-he="הרשמה מוקדמת עד 12.4" data-en="Early bird until April 12">הרשמה מוקדמת עד 12.4</span>
+              <span class="price-value" data-he="₪2,450" data-en="₪2,450">₪2,450</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label" data-he="מחיר מלא" data-en="Full price">מחיר מלא</span>
+              <span class="price-value full" data-he="₪2,750" data-en="₪2,750">₪2,750</span>
+            </div>
+          </div>
+
+        </div>
+        <p class="pricing-note fade-in" data-he="שמירת מקום: מקדמה ₪1,000 · יתרת תשלום עד 1.6.2025" data-en="Deposit: ₪1,000 · Balance due by June 1, 2025">שמירת מקום: מקדמה ₪1,000 · יתרת תשלום עד 1.6.2025</p>
+      </div>
+    </section>
+
+    <!-- ===== CANCELLATION ===== -->
+    <section id="cancellation">
+      <div class="container">
+        <h2 class="section-title fade-in" data-he="מדיניות ביטול" data-en="Cancellation Policy">מדיניות ביטול</h2>
+        <div class="divider fade-in"></div>
+        <div class="cancel-table fade-in">
+          <div class="cancel-row">
+            <span class="cancel-date" data-he="עד 1.5" data-en="Until May 1">עד 1.5</span>
+            <span class="cancel-policy" data-he="החזר בניכוי ₪350" data-en="Refund minus ₪350">החזר בניכוי ₪350</span>
+          </div>
+          <div class="cancel-row">
+            <span class="cancel-date" data-he="1.5–1.6" data-en="May 1 – June 1">1.5–1.6</span>
+            <span class="cancel-policy" data-he="החזר בניכוי ₪1,000" data-en="Refund minus ₪1,000">החזר בניכוי ₪1,000</span>
+          </div>
+          <div class="cancel-row">
+            <span class="cancel-date" data-he="אחרי 1.6" data-en="After June 1">אחרי 1.6</span>
+            <span class="cancel-policy" data-he="אין החזר (אלא אם נמצא מחליפה)" data-en="No refund (unless replacement found)">אין החזר (אלא אם נמצא מחליפה)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHO IS THIS FOR ===== -->
+    <section id="who" class="section-cream">
+      <div class="container">
+        <h2 class="section-title fade-in" data-he="למי זה מתאים" data-en="Who Is This For">למי זה מתאים</h2>
+        <div class="divider fade-in"></div>
+        <div class="who-grid fade-in">
+          <ul class="who-list">
+            <li>
+              <span class="who-check">✓</span>
+              <span data-he="למתרגלות עם ניסיון של לפחות שנה" data-en="Practitioners with at least one year of experience">למתרגלות עם ניסיון של לפחות שנה</span>
+            </li>
+            <li>
+              <span class="who-check">✓</span>
+              <span data-he="למי שרוצה להעמיק עבודה טכנית בגמישות ואיזוני ידיים" data-en="Those looking to deepen technical work in flexibility and handstands">למי שרוצה להעמיק עבודה טכנית בגמישות ואיזוני ידיים</span>
+            </li>
+            <li>
+              <span class="who-check">✓</span>
+              <span data-he="למי שמוכנה לעבוד חזק ולהתפתח" data-en="Those ready to work hard and grow">למי שמוכנה לעבוד חזק ולהתפתח</span>
+            </li>
+            <li>
+              <span class="who-check">✓</span>
+              <span data-he="למי שמחפשת סופ״ש תרגול משמעותי בתוך קבוצה איכותית" data-en="Those seeking a meaningful practice weekend in a quality group">למי שמחפשת סופ״ש תרגול משמעותי בתוך קבוצה איכותית</span>
+            </li>
+          </ul>
+          <div class="who-image fade-in">
+            <img src="IMG_4774.jpg" alt="Yahel performing a forearm stand">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT YAHEL ===== -->
+    <section id="about-yahel">
+      <div class="container">
+        <h2 class="section-title fade-in" data-he="עליי" data-en="About Yahel">עליי</h2>
+        <div class="divider fade-in"></div>
+        <div class="about-yahel-content fade-in">
+          <div class="yahel-image fade-in">
+            <img src="IMG_4773.jpg" alt="Yahel Gideon">
+          </div>
+          <div class="yahel-bio" data-he="אני יהל גדעון, מורה ליוגה ותנועה מאז 2021. הדרך שלי בעולם התנועה עברה דרך הכשרות מגוונות – ויניאסה, רוקט, אשטנגה והתה יוגה, גמישות, פילאטיס ואנימל פלואו – והיום אני משלבת את כולן לגישה אחת שמבוססת על דיוק, כוח ושליטה. אני מלמדת סדנאות עומק, מנחה מפגשים בקורסי מורים ומלווה תלמידים ומורים בעבודה טכנית ממוקדת. העבודה איתי רצינית ומקצועית, אבל האווירה תמיד פתוחה ומשחקית. אפשר לעבוד חזק ולהישאר סקרניות. אפשר לבנות יכולת אמיתית בלי לחץ. אני חיה ומלמדת באוסטרליה, ומגיעה לישראל לביקור שנתי ביולי. הריטריט הזה הוא המפגש המרכזי שאקיים בארץ השנה." data-en="I'm Yahel Gideon, a yoga and movement teacher since 2021. My movement journey has taken me through diverse trainings — Vinyasa, Rocket, Ashtanga and Hatha yoga, flexibility, Pilates and Animal Flow — and today I integrate them all into one approach based on precision, strength, and control. I teach deep-dive workshops, lead sessions in teacher training programs, and guide students and teachers through focused technical work. My work is serious and professional, but the atmosphere is always open and playful. You can work hard and stay curious. You can build real ability without pressure. I live and teach in Australia, and come to Israel for an annual visit in July. This retreat is the main event I'll be holding in Israel this year.">אני יהל גדעון, מורה ליוגה ותנועה מאז 2021. הדרך שלי בעולם התנועה עברה דרך הכשרות מגוונות – ויניאסה, רוקט, אשטנגה והתה יוגה, גמישות, פילאטיס ואנימל פלואו – והיום אני משלבת את כולן לגישה אחת שמבוססת על דיוק, כוח ושליטה. אני מלמדת סדנאות עומק, מנחה מפגשים בקורסי מורים ומלווה תלמידים ומורים בעבודה טכנית ממוקדת. העבודה איתי רצינית ומקצועית, אבל האווירה תמיד פתוחה ומשחקית. אפשר לעבוד חזק ולהישאר סקרניות. אפשר לבנות יכולת אמיתית בלי לחץ. אני חיה ומלמדת באוסטרליה, ומגיעה לישראל לביקור שנתי ביולי. הריטריט הזה הוא המפגש המרכזי שאקיים בארץ השנה.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REGISTER CTA ===== -->
+    <section id="register">
+      <div class="container">
+        <h2 class="fade-in" data-he="מוכנה? בואי נתרגל." data-en="Ready? Let's practice.">מוכנה? בואי נתרגל.</h2>
+        <a href="https://wa.me/972523280031?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A8%20%D7%9E%D7%A7%D7%95%D7%9D%20%D7%91%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%F0%9F%99%8F" class="btn btn-whatsapp fade-in" target="_blank" rel="noopener" data-he="הרשמה דרך WhatsApp 💬" data-en="Register via WhatsApp 💬">הרשמה דרך WhatsApp 💬</a>
+        <p class="register-sub fade-in" data-he="שלחי הודעה ליהל ונסגור פרטים" data-en="Send Yahel a message and we'll sort out the details">שלחי הודעה ליהל ונסגור פרטים</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo-col">
+        <div class="footer-logo-text">YahelMoves</div>
+        <p class="footer-tagline" data-he="יוגה, תנועה ותרגול עומק" data-en="Yoga, movement &amp; deep practice">יוגה, תנועה ותרגול עומק</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-he="קישורים" data-en="Quick Links">קישורים</h4>
+        <ul>
+          <li><a href="#about" data-he="על הריטריט" data-en="The Retreat">על הריטריט</a></li>
+          <li><a href="#schedule" data-he="לוח זמנים" data-en="Schedule">לוח זמנים</a></li>
+          <li><a href="#venue" data-he="המקום" data-en="Venue">המקום</a></li>
+          <li><a href="#pricing" data-he="מחירים" data-en="Pricing">מחירים</a></li>
+          <li><a href="#who" data-he="למי מתאים" data-en="Who Is This For">למי מתאים</a></li>
+          <li><a href="#about-yahel" data-he="על יהל" data-en="About Yahel">על יהל</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-he="צרי קשר" data-en="Contact">צרי קשר</h4>
+        <ul>
+          <li><a href="https://wa.me/972523280031" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:orgidon3@gmail.com">orgidon3@gmail.com</a></li>
+          <li><a href="https://instagram.com/yahel_moves" target="_blank" rel="noopener">@yahel_moves</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-he="מידע" data-en="Info">מידע</h4>
+        <ul>
+          <li><a href="#cancellation" data-he="מדיניות ביטול" data-en="Cancellation Policy">מדיניות ביטול</a></li>
+          <li><a href="#" onclick="openPrivacyModal(); return false;" data-he="מדיניות פרטיות" data-en="Privacy Policy">מדיניות פרטיות</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 <a href="https://yahelmoves.com" target="_blank" rel="noopener">Yahel Moves</a></span>
+      <span><span data-he="נבנה על ידי" data-en="Built by">נבנה על ידי</span> <a href="https://www.fuzionwebz.com/" target="_blank" rel="noopener">FuzionWebz</a></span>
+    </div>
+  </footer>
+
+  <!-- ===== PRIVACY POLICY MODAL ===== -->
+  <div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="privacyModalTitle" data-he="מדיניות פרטיות" data-en="Privacy Policy">מדיניות פרטיות</h2>
+        <button class="modal-close" onclick="closePrivacyModal()" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="privacy-he" data-privacy-lang="he">
+          <p><strong>עדכון אחרון:</strong> יולי 2025</p>
+          <h3>1. כללי</h3>
+          <p>אתר זה מופעל על ידי יהל גדעון ("יהל מוּבס" / "Yahel Moves"). מדיניות פרטיות זו מתארת כיצד אנו אוספים, משתמשים ומגנים על המידע האישי שלך בקשר עם ריטריט היוגה וכל שירות נלווה.</p>
+          <h3>2. מידע שאנו אוספים</h3>
+          <p>בעת הרשמה לריטריט, ייתכן שנאסוף את הפרטים הבאים:</p>
+          <ul>
+            <li>שם מלא</li>
+            <li>כתובת אימייל</li>
+            <li>מספר טלפון (WhatsApp)</li>
+            <li>מידע רפואי רלוונטי לתרגול (לפי שיקול דעתך)</li>
+            <li>העדפות חדר ושיבוץ</li>
+            <li>פרטי תשלום (מעובדים באופן מאובטח דרך צד שלישי)</li>
+          </ul>
+          <h3>3. כיצד אנו משתמשים במידע</h3>
+          <p>המידע האישי שלך משמש אך ורק למטרות הבאות:</p>
+          <ul>
+            <li>ניהול ההרשמה ושיבוץ חדרים לריטריט</li>
+            <li>תקשורת בנוגע ללוגיסטיקה, לוח זמנים ועדכונים דרך WhatsApp ו/או אימייל</li>
+            <li>התאמת התרגול במידת הצורך לצרכים בריאותיים</li>
+            <li>עיבוד תשלומים והחזרים בהתאם למדיניות הביטול</li>
+          </ul>
+          <h3>4. תקשורת ב-WhatsApp</h3>
+          <p>ההרשמה לריטריט מתבצעת באמצעות WhatsApp. בשליחת הודעה אלינו, את מסכימה לקבל תקשורת הקשורה לריטריט דרך WhatsApp, כולל אישורים, תזכורות ומידע לוגיסטי. לא נשלח הודעות שיווקיות ללא הסכמתך.</p>
+          <h3>5. שיתוף מידע עם צדדים שלישיים</h3>
+          <p>איננו מוכרים, משכירים או משתפים את המידע האישי שלך עם צדדים שלישיים, למעט:</p>
+          <ul>
+            <li>מקום האירוח (Slowness, קיבוץ מורן) – לצורך שיבוץ חדרים בלבד</li>
+            <li>ספקי שירותי תשלום – לעיבוד מאובטח של עסקאות</li>
+            <li>כנדרש על פי חוק</li>
+          </ul>
+          <h3>6. אבטחת מידע</h3>
+          <p>אנו נוקטים באמצעים סבירים להגנה על המידע האישי שלך. עם זאת, שום שיטת העברה באינטרנט אינה מאובטחת ב-100%, ואיננו יכולים להבטיח אבטחה מוחלטת.</p>
+          <h3>7. שמירת מידע</h3>
+          <p>אנו שומרים את המידע האישי שלך כל עוד הדבר נדרש למטרה שלשמה נאסף, ולאחר מכן נמחק או נהפוך אותו לאנונימי תוך 12 חודשים מסיום הריטריט.</p>
+          <h3>8. הזכויות שלך</h3>
+          <p>באפשרותך לבקש בכל עת:</p>
+          <ul>
+            <li>גישה למידע האישי שלך</li>
+            <li>תיקון מידע לא מדויק</li>
+            <li>מחיקת המידע שלך</li>
+          </ul>
+          <p>לכל בקשה, פני אלינו באימייל: <a href="mailto:orgidon3@gmail.com">orgidon3@gmail.com</a></p>
+          <h3>9. מדיניות ביטול</h3>
+          <p>למדיניות הביטול וההחזרים המלאה, עייני בסעיף <a href="#cancellation" onclick="closePrivacyModal()">מדיניות ביטול</a> בדף זה.</p>
+          <h3>10. שינויים במדיניות</h3>
+          <p>אנו עשויים לעדכן מדיניות זו מעת לעת. שינויים ייכנסו לתוקף עם פרסומם באתר זה.</p>
+          <h3>11. יצירת קשר</h3>
+          <p>לשאלות בנוגע למדיניות פרטיות זו:<br>
+          יהל גדעון – Yahel Moves<br>
+          אימייל: <a href="mailto:orgidon3@gmail.com">orgidon3@gmail.com</a><br>
+          WhatsApp: <a href="https://wa.me/972523280031" target="_blank" rel="noopener">+972-52-328-0031</a></p>
+        </div>
+        <div class="privacy-en" data-privacy-lang="en">
+          <p><strong>Last updated:</strong> July 2025</p>
+          <h3>1. Introduction</h3>
+          <p>This website is operated by Yahel Gideon ("Yahel Moves"). This privacy policy describes how we collect, use, and protect your personal information in connection with the yoga retreat and any related services.</p>
+          <h3>2. Information We Collect</h3>
+          <p>When you register for the retreat, we may collect the following details:</p>
+          <ul>
+            <li>Full name</li>
+            <li>Email address</li>
+            <li>Phone number (WhatsApp)</li>
+            <li>Relevant medical information for practice (at your discretion)</li>
+            <li>Room preferences and allocation</li>
+            <li>Payment details (processed securely through a third party)</li>
+          </ul>
+          <h3>3. How We Use Your Information</h3>
+          <p>Your personal information is used solely for the following purposes:</p>
+          <ul>
+            <li>Managing registration and room allocation for the retreat</li>
+            <li>Communicating regarding logistics, schedule, and updates via WhatsApp and/or email</li>
+            <li>Adapting practice as needed for health requirements</li>
+            <li>Processing payments and refunds in accordance with the cancellation policy</li>
+          </ul>
+          <h3>4. WhatsApp Communication</h3>
+          <p>Registration for the retreat is conducted via WhatsApp. By sending us a message, you agree to receive retreat-related communications through WhatsApp, including confirmations, reminders, and logistical information. We will not send marketing messages without your consent.</p>
+          <h3>5. Third-Party Sharing</h3>
+          <p>We do not sell, rent, or share your personal information with third parties, except:</p>
+          <ul>
+            <li>The accommodation venue (Slowness, Kibbutz Moran) — for room allocation purposes only</li>
+            <li>Payment service providers — for secure transaction processing</li>
+            <li>As required by law</li>
+          </ul>
+          <h3>6. Data Security</h3>
+          <p>We take reasonable measures to protect your personal information. However, no method of internet transmission is 100% secure, and we cannot guarantee absolute security.</p>
+          <h3>7. Data Retention</h3>
+          <p>We retain your personal information for as long as necessary for the purpose for which it was collected, and will delete or anonymize it within 12 months after the retreat concludes.</p>
+          <h3>8. Your Rights</h3>
+          <p>You may request at any time:</p>
+          <ul>
+            <li>Access to your personal data</li>
+            <li>Correction of inaccurate information</li>
+            <li>Deletion of your data</li>
+          </ul>
+          <p>For any request, please contact us at: <a href="mailto:orgidon3@gmail.com">orgidon3@gmail.com</a></p>
+          <h3>9. Cancellation Policy</h3>
+          <p>For the full cancellation and refund policy, please see the <a href="#cancellation" onclick="closePrivacyModal()">Cancellation Policy</a> section on this page.</p>
+          <h3>10. Changes to This Policy</h3>
+          <p>We may update this policy from time to time. Changes will take effect upon publication on this website.</p>
+          <h3>11. Contact Us</h3>
+          <p>For questions regarding this privacy policy:<br>
+          Yahel Gideon — Yahel Moves<br>
+          Email: <a href="mailto:orgidon3@gmail.com">orgidon3@gmail.com</a><br>
+          WhatsApp: <a href="https://wa.me/972523280031" target="_blank" rel="noopener">+972-52-328-0031</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/972523280031?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A8%20%D7%9E%D7%A7%D7%95%D7%9D%20%D7%91%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%F0%9F%99%8F" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // ===== LANGUAGE TOGGLE =====
+    let currentLang = 'he';
+
+    function setLang(lang) {
+      currentLang = lang;
+      const html = document.documentElement;
+      html.lang = lang === 'he' ? 'he' : 'en';
+      html.dir = lang === 'he' ? 'rtl' : 'ltr';
+      document.body.classList.toggle('lang-en', lang === 'en');
+      document.body.classList.toggle('lang-he', lang === 'he');
+
+      document.querySelectorAll('[data-he][data-en]').forEach(function(el) {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+
+      var toggleBtn = document.querySelector('.lang-toggle');
+      toggleBtn.textContent = lang === 'he' ? 'EN' : 'HE';
+
+      window.location.hash = lang;
+    }
+
+    function toggleLang() {
+      setLang(currentLang === 'he' ? 'en' : 'he');
+    }
+
+    // Restore language from hash
+    if (window.location.hash === '#en') {
+      setLang('en');
+    }
+
+    // ===== NAVBAR SCROLL =====
+    var navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // ===== HAMBURGER MENU =====
+    var hamburger = document.querySelector('.hamburger');
+    var mobileNav = document.getElementById('mobileNav');
+
+    function toggleMenu() {
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('open');
+      var expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      mobileNav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    // ===== FADE-IN ON SCROLL =====
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in, .image-reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    // ===== MARQUEE WAVE ANIMATION =====
+    var marqueeTextPath = document.getElementById('marquee-text-path');
+    var marqueeOffset = 0;
+    var marqueeSpeed = 120;
+    var lastTime = 0;
+
+    function animateMarquee(timestamp) {
+      if (!lastTime) lastTime = timestamp;
+      var delta = (timestamp - lastTime) / 1000;
+      lastTime = timestamp;
+      marqueeOffset -= marqueeSpeed * delta;
+      if (marqueeOffset < -1100) {
+        marqueeOffset += 1100;
+      }
+      marqueeTextPath.setAttribute('startOffset', marqueeOffset);
+      requestAnimationFrame(animateMarquee);
+    }
+    requestAnimationFrame(animateMarquee);
+
+    // ===== PRIVACY MODAL =====
+    function openPrivacyModal() {
+      var modal = document.getElementById('privacyModal');
+      modal.removeAttribute('hidden');
+      modal.offsetHeight; // force reflow
+      modal.classList.add('modal-visible');
+      document.body.style.overflow = 'hidden';
+      document.addEventListener('keydown', handleModalEscape);
+      modal.querySelector('.modal-close').focus();
+    }
+    function closePrivacyModal() {
+      var modal = document.getElementById('privacyModal');
+      modal.classList.remove('modal-visible');
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleModalEscape);
+      setTimeout(function() { modal.setAttribute('hidden', ''); }, 300);
+    }
+    function handleModalEscape(e) {
+      if (e.key === 'Escape') closePrivacyModal();
+    }
+    document.getElementById('privacyModal').addEventListener('click', function(e) {
+      if (e.target === this) closePrivacyModal();
+    });
+  </script>
+</body>
+</html>
