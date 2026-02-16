@@ -1,3 +1,5 @@
+.DS_Store
+
 # Original Hebrew-named files (duplicates with clean names)
 יוגה.jpg
 תמונה של WhatsApp*
@@ -6,3 +8,7 @@
 
 # Original venue subfolder
 המקום/
+
+# Hebrew source image folders
+תמונות לריטריטים/
+שיעורים/

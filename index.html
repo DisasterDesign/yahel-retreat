@@ -6,7 +6,7 @@
   <title>ריטריט יוגה – יהל מוּבס | Yahel Moves Yoga Retreat</title>
   <meta name="description" content="ריטריט רוקט, איזוני ידיים וגמישות | 2–4 ביולי 2025 | Slowness, קיבוץ מורן. Rocket, Handstands & Flexibility Retreat.">
   <meta property="og:title" content="ריטריט יוגה – יהל מוּבס | Yahel Moves Yoga Retreat">
-  <meta property="og:description" content="שלושה ימים של תרגול עומק למתרגלות מנוסות. 2–4 ביולי 2025, Slowness, קיבוץ מורן.">
+  <meta property="og:description" content="שלושה ימים של תרגול עומק למתרגלים/ות מנוסים/ות. 2–4 ביולי 2025, Slowness, קיבוץ מורן.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="he_IL">
   <meta property="og:locale:alternate" content="en_US">
@@ -545,6 +545,10 @@
       grid-column: 1 / -1;
       height: 260px;
     }
+    .venue-gallery img:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      height: 220px;
+    }
     .venue-info h3 {
       font-size: 1.4rem;
       margin-bottom: 20px;
@@ -561,6 +565,125 @@
       border-radius: 20px;
       font-size: 0.9rem;
       font-weight: 400;
+    }
+
+    /* ===== VENUE MAP ===== */
+    .venue-map {
+      grid-column: 1 / -1;
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .venue-map iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: var(--radius);
+    }
+
+    /* ===== RETREAT GALLERY ===== */
+    .retreat-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .gallery-item {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-item:nth-child(5n+1) {
+      grid-column: span 2;
+    }
+    .gallery-item:nth-child(5n+1) img {
+      height: 280px;
+    }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+    }
+    .lightbox-overlay[hidden] { display: none; }
+    .lightbox-overlay.lightbox-visible { opacity: 1; }
+    .lightbox-overlay img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+    }
+    .lightbox-overlay.lightbox-visible img {
+      transform: scale(1);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 2.2rem;
+      cursor: pointer;
+      padding: 8px;
+      line-height: 1;
+      transition: opacity 0.2s;
+      z-index: 201;
+    }
+    .lightbox-close:hover { opacity: 0.7; }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 12px 16px;
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.3); }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+    [dir="rtl"] .lightbox-prev { left: auto; right: 20px; }
+    [dir="rtl"] .lightbox-next { right: auto; left: 20px; }
+
+    /* ===== WHO IMAGE GRID ===== */
+    .who-image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .who-image-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
 
     /* ===== PRICING ===== */
@@ -1014,6 +1137,9 @@
       .venue-content {
         grid-template-columns: 1fr 1fr;
       }
+      .venue-map iframe {
+        height: 400px;
+      }
       .about-yahel-content {
         grid-template-columns: 220px 1fr;
       }
@@ -1022,6 +1148,19 @@
       }
       .who-grid {
         grid-template-columns: 1fr 1fr;
+      }
+      .who-image-grid img {
+        height: 200px;
+      }
+      .retreat-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .gallery-item img {
+        height: 250px;
+      }
+      .gallery-item:nth-child(5n+1) img {
+        height: 320px;
       }
       section {
         padding: 100px 0;
@@ -1037,6 +1176,9 @@
       }
       .hamburger {
         display: none;
+      }
+      .retreat-gallery {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   </style>
@@ -1054,6 +1196,7 @@
           <li><a href="#about" data-he="הריטריט" data-en="The Retreat">הריטריט</a></li>
           <li><a href="#schedule" data-he="לוח זמנים" data-en="Schedule">לוח זמנים</a></li>
           <li><a href="#venue" data-he="המקום" data-en="Venue">המקום</a></li>
+          <li><a href="#gallery" data-he="גלריה" data-en="Gallery">גלריה</a></li>
           <li><a href="#pricing" data-he="מחירים" data-en="Pricing">מחירים</a></li>
           <li><a href="#about-yahel" data-he="עליי" data-en="About">עליי</a></li>
           <li><a href="#register" data-he="הרשמה" data-en="Register">הרשמה</a></li>
@@ -1072,6 +1215,7 @@
       <a href="#about" onclick="closeMenu()" data-he="הריטריט" data-en="The Retreat">הריטריט</a>
       <a href="#schedule" onclick="closeMenu()" data-he="לוח זמנים" data-en="Schedule">לוח זמנים</a>
       <a href="#venue" onclick="closeMenu()" data-he="המקום" data-en="Venue">המקום</a>
+      <a href="#gallery" onclick="closeMenu()" data-he="גלריה" data-en="Gallery">גלריה</a>
       <a href="#pricing" onclick="closeMenu()" data-he="מחירים" data-en="Pricing">מחירים</a>
       <a href="#about-yahel" onclick="closeMenu()" data-he="עליי" data-en="About">עליי</a>
       <a href="#register" onclick="closeMenu()" data-he="הרשמה" data-en="Register">הרשמה</a>
@@ -1085,8 +1229,8 @@
       <div class="hero-content fade-in">
         <h1 data-he="ריטריט רוקט, איזוני ידיים וגמישות" data-en="Rocket, Handstands &amp; Flexibility Retreat">ריטריט רוקט, איזוני ידיים וגמישות</h1>
         <p class="hero-subtitle" data-he="2–4 ביולי 2025 | Slowness, קיבוץ מורן" data-en="July 2–4, 2025 | Slowness, Kibbutz Moran">2–4 ביולי 2025 | Slowness, קיבוץ מורן</p>
-        <p class="hero-desc" data-he="שלושה ימים של תרגול עומק למתרגלות מנוסות. עבודה רצינית – באווירה פתוחה ומשחקית." data-en="Three days of deep practice for experienced practitioners. Serious work – in an open, playful atmosphere.">שלושה ימים של תרגול עומק למתרגלות מנוסות. עבודה רצינית – באווירה פתוחה ומשחקית.</p>
-        <a href="https://wa.me/972523280031?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A8%20%D7%9E%D7%A7%D7%95%D7%9D%20%D7%91%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%F0%9F%99%8F" class="btn btn-primary" target="_blank" rel="noopener" data-he="שמרי מקום ←" data-en="Reserve Your Spot →">שמרי מקום ←</a>
+        <p class="hero-desc" data-he="שלושה ימים של תרגול עומק למתרגלים/ות מנוסים/ות. עבודה רצינית – באווירה פתוחה ומשחקית." data-en="Three days of deep practice for experienced practitioners. Serious work – in an open, playful atmosphere.">שלושה ימים של תרגול עומק למתרגלים/ות מנוסים/ות. עבודה רצינית – באווירה פתוחה ומשחקית.</p>
+        <a href="https://wa.me/972523280031?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A8%20%D7%9E%D7%A7%D7%95%D7%9D%20%D7%91%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%F0%9F%99%8F" class="btn btn-primary" target="_blank" rel="noopener" data-he="שמרו מקום ←" data-en="Reserve Your Spot →">שמרו מקום ←</a>
       </div>
     </section>
 
@@ -1229,6 +1373,8 @@
         <img src="split-forest.jpg" alt="Split pose in forest">
         <img src="backbend-forest.jpg" alt="Backbend on tree roots">
         <img src="IMG_4774.jpg" alt="Forearm stand in studio">
+        <img src="class-05.jpeg" alt="Outdoor yoga group class">
+        <img src="class-06.jpeg" alt="Yoga class on the beach">
       </div>
     </div>
 
@@ -1241,7 +1387,9 @@
           <div class="venue-gallery fade-in">
             <img src="venue-building.webp" alt="Slowness accommodation at Kibbutz Moran">
             <img src="venue-courtyard.jpeg" alt="Slowness courtyard with pergola">
-            <img src="venue-path.jpg" alt="Olive tree path at Kibbutz Moran">
+            <img src="retreat-room-01.jpg" alt="Slowness room with garden view">
+            <img src="retreat-room-02.jpg" alt="Slowness suite with lounge area">
+            <img src="retreat-pool.jpg" alt="Swimming pool at Kibbutz Moran">
           </div>
           <div class="venue-info">
             <h3 data-he="Slowness, קיבוץ מורן" data-en="Slowness, Kibbutz Moran">Slowness, קיבוץ מורן</h3>
@@ -1253,6 +1401,55 @@
               <li data-he="כל התרגולים והסדנאות" data-en="All practices &amp; workshops">כל התרגולים והסדנאות</li>
             </ul>
           </div>
+          <div class="venue-map fade-in">
+            <iframe
+              src="https://maps.google.com/maps?q=Slowness+Kibbutz+Moran+Israel&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Slowness at Kibbutz Moran - map">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RETREAT GALLERY ===== -->
+    <section id="gallery" class="section-cream">
+      <div class="container">
+        <h2 class="section-title fade-in" data-he="גלריה" data-en="Gallery">גלריה</h2>
+        <div class="divider fade-in"></div>
+        <div class="retreat-gallery fade-in">
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="retreat-room-02.jpg" alt="Slowness suite" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="retreat-pool.jpg" alt="Swimming pool with mountain view" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="retreat-dining-01.jpg" alt="Dining spread at Slowness" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="retreat-breakfast.jpg" alt="Breakfast bowl" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="retreat-practice-01.jpg" alt="Yoga practice in studio" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="retreat-food-02.jpg" alt="Fresh salad dish" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="retreat-room-03.jpg" alt="Accommodation bedroom" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="retreat-dining-03.jpg" alt="Dinner at Slowness" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="retreat-amenities.jpg" alt="Room amenities" loading="lazy">
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="retreat-atmosphere-01.jpg" alt="Retreat atmosphere" loading="lazy">
+          </div>
         </div>
       </div>
     </section>
@@ -1262,7 +1459,7 @@
       <div class="container">
         <h2 class="section-title fade-in" data-he="חדרים ומחירים" data-en="Rooms &amp; Pricing">חדרים ומחירים</h2>
         <div class="divider fade-in"></div>
-        <p class="pricing-subtitle fade-in" data-he="סה״כ עד 25 משתתפות" data-en="Up to 25 participants">סה״כ עד 25 משתתפות</p>
+        <p class="pricing-subtitle fade-in" data-he="סה״כ עד 25 משתתפים/ות" data-en="Up to 25 participants">סה״כ עד 25 משתתפים/ות</p>
         <div class="pricing-grid">
 
           <!-- Double Room -->
@@ -1314,7 +1511,7 @@
           </div>
           <div class="cancel-row">
             <span class="cancel-date" data-he="אחרי 1.6" data-en="After June 1">אחרי 1.6</span>
-            <span class="cancel-policy" data-he="אין החזר (אלא אם נמצא מחליפה)" data-en="No refund (unless replacement found)">אין החזר (אלא אם נמצא מחליפה)</span>
+            <span class="cancel-policy" data-he="אין החזר (אלא אם נמצא/ה מחליף/ה)" data-en="No refund (unless replacement found)">אין החזר (אלא אם נמצא/ה מחליף/ה)</span>
           </div>
         </div>
       </div>
@@ -1329,7 +1526,7 @@
           <ul class="who-list">
             <li>
               <span class="who-check">✓</span>
-              <span data-he="למתרגלות עם ניסיון של לפחות שנה" data-en="Practitioners with at least one year of experience">למתרגלות עם ניסיון של לפחות שנה</span>
+              <span data-he="למתרגלים/ות עם ניסיון של לפחות שנה" data-en="Practitioners with at least one year of experience">למתרגלים/ות עם ניסיון של לפחות שנה</span>
             </li>
             <li>
               <span class="who-check">✓</span>
@@ -1337,15 +1534,20 @@
             </li>
             <li>
               <span class="who-check">✓</span>
-              <span data-he="למי שמוכנה לעבוד חזק ולהתפתח" data-en="Those ready to work hard and grow">למי שמוכנה לעבוד חזק ולהתפתח</span>
+              <span data-he="למי שמוכן/ה לעבוד חזק ולהתפתח" data-en="Those ready to work hard and grow">למי שמוכן/ה לעבוד חזק ולהתפתח</span>
             </li>
             <li>
               <span class="who-check">✓</span>
-              <span data-he="למי שמחפשת סופ״ש תרגול משמעותי בתוך קבוצה איכותית" data-en="Those seeking a meaningful practice weekend in a quality group">למי שמחפשת סופ״ש תרגול משמעותי בתוך קבוצה איכותית</span>
+              <span data-he="למי שמחפש/ת סופ״ש תרגול משמעותי בתוך קבוצה איכותית" data-en="Those seeking a meaningful practice weekend in a quality group">למי שמחפש/ת סופ״ש תרגול משמעותי בתוך קבוצה איכותית</span>
             </li>
           </ul>
           <div class="who-image fade-in">
-            <img src="IMG_4774.jpg" alt="Yahel performing a forearm stand">
+            <div class="who-image-grid">
+              <img src="class-01.jpeg" alt="Yahel teaching a yoga workshop">
+              <img src="class-03.jpeg" alt="Yoga class in studio">
+              <img src="class-04.jpeg" alt="Hands-on adjustment during practice">
+              <img src="class-02.jpeg" alt="Yoga pose by the ocean">
+            </div>
           </div>
         </div>
       </div>
@@ -1360,7 +1562,7 @@
           <div class="yahel-image fade-in">
             <img src="IMG_4773.jpg" alt="Yahel Gideon">
           </div>
-          <div class="yahel-bio" data-he="אני יהל גדעון, מורה ליוגה ותנועה מאז 2021. הדרך שלי בעולם התנועה עברה דרך הכשרות מגוונות – ויניאסה, רוקט, אשטנגה והתה יוגה, גמישות, פילאטיס ואנימל פלואו – והיום אני משלבת את כולן לגישה אחת שמבוססת על דיוק, כוח ושליטה. אני מלמדת סדנאות עומק, מנחה מפגשים בקורסי מורים ומלווה תלמידים ומורים בעבודה טכנית ממוקדת. העבודה איתי רצינית ומקצועית, אבל האווירה תמיד פתוחה ומשחקית. אפשר לעבוד חזק ולהישאר סקרניות. אפשר לבנות יכולת אמיתית בלי לחץ. אני חיה ומלמדת באוסטרליה, ומגיעה לישראל לביקור שנתי ביולי. הריטריט הזה הוא המפגש המרכזי שאקיים בארץ השנה." data-en="I'm Yahel Gideon, a yoga and movement teacher since 2021. My movement journey has taken me through diverse trainings — Vinyasa, Rocket, Ashtanga and Hatha yoga, flexibility, Pilates and Animal Flow — and today I integrate them all into one approach based on precision, strength, and control. I teach deep-dive workshops, lead sessions in teacher training programs, and guide students and teachers through focused technical work. My work is serious and professional, but the atmosphere is always open and playful. You can work hard and stay curious. You can build real ability without pressure. I live and teach in Australia, and come to Israel for an annual visit in July. This retreat is the main event I'll be holding in Israel this year.">אני יהל גדעון, מורה ליוגה ותנועה מאז 2021. הדרך שלי בעולם התנועה עברה דרך הכשרות מגוונות – ויניאסה, רוקט, אשטנגה והתה יוגה, גמישות, פילאטיס ואנימל פלואו – והיום אני משלבת את כולן לגישה אחת שמבוססת על דיוק, כוח ושליטה. אני מלמדת סדנאות עומק, מנחה מפגשים בקורסי מורים ומלווה תלמידים ומורים בעבודה טכנית ממוקדת. העבודה איתי רצינית ומקצועית, אבל האווירה תמיד פתוחה ומשחקית. אפשר לעבוד חזק ולהישאר סקרניות. אפשר לבנות יכולת אמיתית בלי לחץ. אני חיה ומלמדת באוסטרליה, ומגיעה לישראל לביקור שנתי ביולי. הריטריט הזה הוא המפגש המרכזי שאקיים בארץ השנה.</div>
+          <div class="yahel-bio" data-he="אני יהל גדעון, מורה ליוגה ותנועה מאז 2021. הדרך שלי בעולם התנועה עברה דרך הכשרות מגוונות – ויניאסה, רוקט, אשטנגה והתה יוגה, גמישות, פילאטיס ואנימל פלואו – והיום אני משלבת את כולן לגישה אחת שמבוססת על דיוק, כוח ושליטה. אני מלמדת סדנאות עומק, מנחה מפגשים בקורסי מורים ומלווה תלמידים ומורים בעבודה טכנית ממוקדת. העבודה איתי רצינית ומקצועית, אבל האווירה תמיד פתוחה ומשחקית. אפשר לעבוד חזק ולהישאר סקרנים/ות. אפשר לבנות יכולת אמיתית בלי לחץ. אני חיה ומלמדת באוסטרליה, ומגיעה לישראל לביקור שנתי ביולי. הריטריט הזה הוא המפגש המרכזי שאקיים בארץ השנה." data-en="I'm Yahel Gideon, a yoga and movement teacher since 2021. My movement journey has taken me through diverse trainings — Vinyasa, Rocket, Ashtanga and Hatha yoga, flexibility, Pilates and Animal Flow — and today I integrate them all into one approach based on precision, strength, and control. I teach deep-dive workshops, lead sessions in teacher training programs, and guide students and teachers through focused technical work. My work is serious and professional, but the atmosphere is always open and playful. You can work hard and stay curious. You can build real ability without pressure. I live and teach in Australia, and come to Israel for an annual visit in July. This retreat is the main event I'll be holding in Israel this year.">אני יהל גדעון, מורה ליוגה ותנועה מאז 2021. הדרך שלי בעולם התנועה עברה דרך הכשרות מגוונות – ויניאסה, רוקט, אשטנגה והתה יוגה, גמישות, פילאטיס ואנימל פלואו – והיום אני משלבת את כולן לגישה אחת שמבוססת על דיוק, כוח ושליטה. אני מלמדת סדנאות עומק, מנחה מפגשים בקורסי מורים ומלווה תלמידים ומורים בעבודה טכנית ממוקדת. העבודה איתי רצינית ומקצועית, אבל האווירה תמיד פתוחה ומשחקית. אפשר לעבוד חזק ולהישאר סקרנים/ות. אפשר לבנות יכולת אמיתית בלי לחץ. אני חיה ומלמדת באוסטרליה, ומגיעה לישראל לביקור שנתי ביולי. הריטריט הזה הוא המפגש המרכזי שאקיים בארץ השנה.</div>
         </div>
       </div>
     </section>
@@ -1368,9 +1570,9 @@
     <!-- ===== REGISTER CTA ===== -->
     <section id="register">
       <div class="container">
-        <h2 class="fade-in" data-he="מוכנה? בואי נתרגל." data-en="Ready? Let's practice.">מוכנה? בואי נתרגל.</h2>
+        <h2 class="fade-in" data-he="מוכנים/ות? בואו נתרגל." data-en="Ready? Let's practice.">מוכנים/ות? בואו נתרגל.</h2>
         <a href="https://wa.me/972523280031?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A8%20%D7%9E%D7%A7%D7%95%D7%9D%20%D7%91%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%F0%9F%99%8F" class="btn btn-whatsapp fade-in" target="_blank" rel="noopener" data-he="הרשמה דרך WhatsApp 💬" data-en="Register via WhatsApp 💬">הרשמה דרך WhatsApp 💬</a>
-        <p class="register-sub fade-in" data-he="שלחי הודעה ליהל ונסגור פרטים" data-en="Send Yahel a message and we'll sort out the details">שלחי הודעה ליהל ונסגור פרטים</p>
+        <p class="register-sub fade-in" data-he="שלחו הודעה ליהל ונסגור פרטים" data-en="Send Yahel a message and we'll sort out the details">שלחו הודעה ליהל ונסגור פרטים</p>
       </div>
     </section>
 
@@ -1389,13 +1591,14 @@
           <li><a href="#about" data-he="על הריטריט" data-en="The Retreat">על הריטריט</a></li>
           <li><a href="#schedule" data-he="לוח זמנים" data-en="Schedule">לוח זמנים</a></li>
           <li><a href="#venue" data-he="המקום" data-en="Venue">המקום</a></li>
+          <li><a href="#gallery" data-he="גלריה" data-en="Gallery">גלריה</a></li>
           <li><a href="#pricing" data-he="מחירים" data-en="Pricing">מחירים</a></li>
           <li><a href="#who" data-he="למי מתאים" data-en="Who Is This For">למי מתאים</a></li>
           <li><a href="#about-yahel" data-he="על יהל" data-en="About Yahel">על יהל</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4 data-he="צרי קשר" data-en="Contact">צרי קשר</h4>
+        <h4 data-he="צרו קשר" data-en="Contact">צרו קשר</h4>
         <ul>
           <li><a href="https://wa.me/972523280031" target="_blank" rel="noopener">WhatsApp</a></li>
           <li><a href="mailto:orgidon3@gmail.com">orgidon3@gmail.com</a></li>
@@ -1447,7 +1650,7 @@
             <li>עיבוד תשלומים והחזרים בהתאם למדיניות הביטול</li>
           </ul>
           <h3>4. תקשורת ב-WhatsApp</h3>
-          <p>ההרשמה לריטריט מתבצעת באמצעות WhatsApp. בשליחת הודעה אלינו, את מסכימה לקבל תקשורת הקשורה לריטריט דרך WhatsApp, כולל אישורים, תזכורות ומידע לוגיסטי. לא נשלח הודעות שיווקיות ללא הסכמתך.</p>
+          <p>ההרשמה לריטריט מתבצעת באמצעות WhatsApp. בשליחת הודעה אלינו, הנך מסכים/ה לקבל תקשורת הקשורה לריטריט דרך WhatsApp, כולל אישורים, תזכורות ומידע לוגיסטי. לא נשלח הודעות שיווקיות ללא הסכמתך.</p>
           <h3>5. שיתוף מידע עם צדדים שלישיים</h3>
           <p>איננו מוכרים, משכירים או משתפים את המידע האישי שלך עם צדדים שלישיים, למעט:</p>
           <ul>
@@ -1466,9 +1669,9 @@
             <li>תיקון מידע לא מדויק</li>
             <li>מחיקת המידע שלך</li>
           </ul>
-          <p>לכל בקשה, פני אלינו באימייל: <a href="mailto:orgidon3@gmail.com">orgidon3@gmail.com</a></p>
+          <p>לכל בקשה, פנו אלינו באימייל: <a href="mailto:orgidon3@gmail.com">orgidon3@gmail.com</a></p>
           <h3>9. מדיניות ביטול</h3>
-          <p>למדיניות הביטול וההחזרים המלאה, עייני בסעיף <a href="#cancellation" onclick="closePrivacyModal()">מדיניות ביטול</a> בדף זה.</p>
+          <p>למדיניות הביטול וההחזרים המלאה, עיינו בסעיף <a href="#cancellation" onclick="closePrivacyModal()">מדיניות ביטול</a> בדף זה.</p>
           <h3>10. שינויים במדיניות</h3>
           <p>אנו עשויים לעדכן מדיניות זו מעת לעת. שינויים ייכנסו לתוקף עם פרסומם באתר זה.</p>
           <h3>11. יצירת קשר</h3>
@@ -1538,6 +1741,14 @@
   <a href="https://wa.me/972523280031?text=%D7%94%D7%99%D7%99%20%D7%99%D7%94%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A8%20%D7%9E%D7%A7%D7%95%D7%9D%20%D7%91%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%F0%9F%99%8F" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1, event)" aria-label="Previous image">&#8249;</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1, event)" aria-label="Next image">&#8250;</button>
+  </div>
 
   <script>
     // ===== LANGUAGE TOGGLE =====
@@ -1654,6 +1865,54 @@
     document.getElementById('privacyModal').addEventListener('click', function(e) {
       if (e.target === this) closePrivacyModal();
     });
+
+    // ===== LIGHTBOX =====
+    var galleryItems = [];
+    var currentLightboxIndex = 0;
+
+    function initGallery() {
+      galleryItems = Array.from(document.querySelectorAll('.gallery-item img'));
+    }
+
+    function openLightbox(item) {
+      if (!galleryItems.length) initGallery();
+      var img = item.querySelector('img');
+      currentLightboxIndex = galleryItems.indexOf(img);
+      var lightbox = document.getElementById('lightbox');
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('lightboxImg').alt = img.alt;
+      lightbox.removeAttribute('hidden');
+      lightbox.offsetHeight;
+      lightbox.classList.add('lightbox-visible');
+      document.body.style.overflow = 'hidden';
+      document.addEventListener('keydown', handleLightboxKey);
+    }
+
+    function closeLightbox(e) {
+      if (e && e.target && e.target.tagName === 'IMG') return;
+      if (e && e.target && e.target.classList.contains('lightbox-nav')) return;
+      var lightbox = document.getElementById('lightbox');
+      lightbox.classList.remove('lightbox-visible');
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleLightboxKey);
+      setTimeout(function() { lightbox.setAttribute('hidden', ''); }, 300);
+    }
+
+    function navigateLightbox(dir, e) {
+      if (e) { e.stopPropagation(); }
+      currentLightboxIndex += dir;
+      if (currentLightboxIndex < 0) currentLightboxIndex = galleryItems.length - 1;
+      if (currentLightboxIndex >= galleryItems.length) currentLightboxIndex = 0;
+      var img = galleryItems[currentLightboxIndex];
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('lightboxImg').alt = img.alt;
+    }
+
+    function handleLightboxKey(e) {
+      if (e.key === 'Escape') closeLightbox(e);
+      if (e.key === 'ArrowLeft') navigateLightbox(document.documentElement.dir === 'rtl' ? 1 : -1, e);
+      if (e.key === 'ArrowRight') navigateLightbox(document.documentElement.dir === 'rtl' ? -1 : 1, e);
+    }
   </script>
 </body>
 </html>
